@@ -37,7 +37,9 @@ Assurez-vous que le chemin vers le dossier lib de JavaFX est correct dans les co
 (par exemple, C:\javafx-sdk-17.0.14\lib sur Windows ou /opt/javafx-sdk-17.0.14/lib sur Linux).
 
 Compilez le projet :
+
 Sur Windows powershell : javac -encoding UTF-8 -cp ".;C:\javafx-sdk-17.0.14\lib\*" *.java
+
 Sur Linux bash : javac -encoding UTF-8 -cp "/home/$user/javafx-sdk-17.0.14/lib/*" *.java
 
 ## Utilisation
@@ -45,6 +47,7 @@ Sur Linux bash : javac -encoding UTF-8 -cp "/home/$user/javafx-sdk-17.0.14/lib/*
 Le serveur doit être exécuté sur la machine que vous souhaitez contrôler à distance.
 
 Sur Windows powershell : java -Dfile.encoding=UTF-8 --module-path "C:\javafx-sdk-17.0.14\lib" --add-modules javafx.controls -cp . Serveur
+
 Sur Linux bash : java -Dfile.encoding=UTF-8 --module-path "/opt/javafx-sdk-17.0.14/lib" --add-modules javafx.controls -cp . Serveur
 
 Cliquez sur "Démarrer" dans l’interface serveur pour lancer le serveur sur le port 8080.
@@ -53,21 +56,29 @@ Cliquez sur "Démarrer" dans l’interface serveur pour lancer le serveur sur le
 Le client peut être exécuté sur une autre machine pour se connecter au serveur.
 
 Sur Windows powershell : java -Dfile.encoding=UTF-8 --module-path "C:\javafx-sdk-17.0.14\lib" --add-modules javafx.controls -cp . Client
+
 Sur Linux bash : java -Dfile.encoding=UTF-8 --module-path "/opt/javafx-sdk-17.0.14/lib" --add-modules javafx.controls -cp . Client
 
 Dans l’interface client :
 Entrez l’adresse IP du serveur (par exemple, 192.168.1.x pour une VM Ubuntu ou localhost si le serveur est sur la même machine).
+
 Entrez le port (8080 par défaut).
+
 Cliquez sur "Se connecter" et entrez le mot de passe par défaut (admin123).
+
 Une fois connecté, utilisez les boutons de la sidebar (dir/ls, mkdir, del/rm, cd) ou entrez des commandes manuellement dans le champ de texte.
 
 3. **Tester sur une machine virtuelle Ubuntu**
 Pour tester le support Linux :
 
 Configurez une VM Ubuntu avec un réseau en mode "Bridge" pour qu’elle soit accessible depuis votre machine hôte.
+
 Trouvez l’adresse IP de la VM Ubuntu avec ip addr show.
+
 Lancez le serveur sur la VM Ubuntu (voir étape 1).
+
 Lancez le client sur votre machine Windows et connectez-vous à l’adresse IP de la VM Ubuntu.
+
 Les commandes prédéfinies s’adapteront automatiquement (par exemple, dir deviendra ls).
 
 # Structure du projet
