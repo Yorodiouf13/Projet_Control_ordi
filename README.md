@@ -72,9 +72,13 @@ Les commandes prédéfinies s’adapteront automatiquement (par exemple, dir dev
 
 # Structure du projet
   Serveur.java : Point d’entrée du serveur, gère les connexions des clients.
+  
   Client.java : Point d’entrée du client, gère la connexion au serveur et l’envoi des commandes.
+  
   InterfaceServeur.java : Interface graphique du serveur.
+  
   InterfaceClient.java : Interface graphique du client.
+  
   GestionClient.java : Gère l’exécution des commandes sur le serveur, avec support pour Windows et Linux.
 
 ## Interface Serveur
